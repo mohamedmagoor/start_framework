@@ -1,0 +1,156 @@
+:root {
+    --first-color: rgb(44, 62, 80);
+    --second-color: rgb(26, 188, 156);
+    --third-color: #1A252F;
+    --fourth-color: white;
+    --duration: .5s;
+}
+
+img {
+    width: 100%;
+}
+
+/* Shared Styles */
+/* ------------------ */
+.home, .about, .portfolio, .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Styles */
+/* ------------------ */
+.navbar {
+    background-color: var(--first-color);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--fourth-color);
+    text-transform: uppercase !important;
+    width: fit-content;
+}
+
+.navbar-brand.active {
+    color: var(--fourth-color);
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--fourth-color);
+}
+
+.nav-link.active {
+    background-color: var(--second-color);
+    color: var(--fourth-color) !important;
+    border-radius: 10px;
+}
+
+/* Home Styles */
+/* ------------------ */
+.home, .about {
+    background-color: var(--second-color);
+    color: var(--fourth-color)
+}
+
+.avatar {
+    width: 200px;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--fourth-color);
+}
+
+/* Portfolio Styles */
+/* ------------------ */
+.portfolio, .contact, .notFound {
+    color: var(--first-color) !important;
+}
+
+.portfolio .line, .contact .line, .notFound .line {
+    background-color: var(--first-color);
+}
+
+.layer {
+    opacity: 0;
+    transition: opacity var(--duration);
+
+}
+
+.layer i {
+    font-size: 60px;
+
+}
+
+.image:hover .layer {
+    background-color: rgba(26, 188, 156, .9) !important;
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+/* Contact Styles */
+/* ------------------ */
+.form-control {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-control:focus {
+
+    border-color: var(--second-color) !important;
+    box-shadow: 0 2.5px 0px rgba(26, 188, 156, .5);
+}
+
+button {
+    background-color: var(--second-color) !important;
+}
+
+/* Footer Styles */
+/* ------------------ */
+.social i {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.social i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.info {
+    background-color: var(--first-color);
+}
+
+.copyright {
+    background-color: var(--third-color);
+}
+
+/* small screens Styles */
+/* ------------------ */
+@media screen and (max-width:992px) {
+    .nav-link {
+        margin: 10px 0 !important;
+    }
+}
